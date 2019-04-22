@@ -1,1 +1,4 @@
-# Undergrad-SmartToy-2019Spring
+# Introduction
+### 자료 소개
+* 한림대학교 스마트토이디자인 (717302) 보조자료 사이트입니다.
+
