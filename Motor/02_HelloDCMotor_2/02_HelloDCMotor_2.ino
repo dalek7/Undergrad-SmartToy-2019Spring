@@ -30,11 +30,11 @@ void loop() {
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
-
   digitalWrite(LED_BUILTIN, LOW);
   Serial.print('2');
   delay(1000);
 
+   // stop
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, HIGH);
