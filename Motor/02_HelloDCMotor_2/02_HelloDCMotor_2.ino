@@ -5,7 +5,7 @@ int IN2 = 11;
 
 int IN3 = 5;
 int IN4 = 6;
-
+int delaytime = 2000;
 void setup() {
   Serial.begin(9600);
   pinMode(LED_BUILTIN, OUTPUT);  
@@ -23,8 +23,17 @@ void loop() {
   digitalWrite(IN4, LOW);
   digitalWrite(LED_BUILTIN, HIGH);
   Serial.print('1');
-  delay(1000);
+  delay(delaytime);
 
+  //stop
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, HIGH);  
+  digitalWrite(LED_BUILTIN, HIGH);
+  Serial.print('0');
+  delay(delaytime);
+  
    // backward
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, HIGH);
@@ -33,14 +42,15 @@ void loop() {
 
   digitalWrite(LED_BUILTIN, LOW);
   Serial.print('2');
-  delay(1000);
+  delay(delaytime);
 
+  //stop
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, HIGH);  
   digitalWrite(LED_BUILTIN, HIGH);
   Serial.print('0');
-  delay(1000);
+  delay(delaytime);
   
 }
