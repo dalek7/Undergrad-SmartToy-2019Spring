@@ -22,22 +22,13 @@ void setup() {
   digitalWrite(IN2, LOW);
 
   // Initial speed
-  motorSpeedA = 0 * 255 / 100; // 0~255
+  motorSpeedA = 128;// 0~255
   
 }
  
 void loop() {
   
   
-  if (motorSpeedA < 0) 
-  {
-    motorSpeedA = 0;
-  }
-  if (motorSpeedA > 255) 
-  {
-    motorSpeedA = 255;
-  }
-    
   analogWrite(enA, motorSpeedA); // Send PWM signal to motor A
 }
 
@@ -67,7 +58,34 @@ void serialEvent() {
       digitalWrite(IN2, HIGH);
       
     }
+    else if(inChar == 'w')
+    {
+      motorSpeedA = motorSpeedA + 10;
+   
+      if (motorSpeedA > 255) 
+      {
+        motorSpeedA = 255;
+      }
+      
+      Serial.println(motorSpeedA);
+      
+    }
+    else if(inChar == 's')
+    {
+      motorSpeedA = motorSpeedA - 10;
+   
+      if (motorSpeedA < 0) 
+      {
+        motorSpeedA = 0;
+      }
+      
+      Serial.println(motorSpeedA);
+      
+    }
+
+
+
+
+    
   }
 }
-
-
