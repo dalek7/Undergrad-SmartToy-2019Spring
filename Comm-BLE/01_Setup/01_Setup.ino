@@ -1,3 +1,4 @@
+// 블루투스 통신을 위한 SoftwareSerial 라이브러리
 #include <SoftwareSerial.h>
 
 SoftwareSerial BTSerial(4, 5);

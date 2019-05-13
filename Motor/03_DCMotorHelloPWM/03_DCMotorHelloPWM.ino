@@ -22,7 +22,7 @@ void setup() {
   digitalWrite(IN2, LOW);
 
   // Initial speed
-  motorSpeedA = 128;// 0~255
+  motorSpeedA = 64;// 0~255
   
 }
  
