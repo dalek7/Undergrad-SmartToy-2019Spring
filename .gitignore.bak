@@ -1,9 +1,6 @@
 # Mac stuff
 .DS_Store
 
-# Seung
-__not/
-__not
 
 # Prerequisites
 *.d
